@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body ng-app>
 
     <div class="header">
         <div class="navbar navbar-default" role="navigation">
@@ -45,7 +45,7 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <label for="total-to-buy" class="sr-only">Number to Purchase</label>
-                        <input id="total-to-buy" type="number" class="form-control" placeholder="# to buy">
+                        <input id="total-to-buy" ng-model="count" type="number" class="form-control" placeholder="# to buy">
                     </div>
                 </form>
             </div>
@@ -56,7 +56,7 @@
                         <label class="sr-only" for="cart-cost">Amount (in dollars)</label>
                         <div class="input-group">
                             <div class="input-group-addon">$</div>
-                            <input id="cart-cost" type="text" class="form-control">
+                            <input id="cart-cost" type="text" class="form-control" value="{{count * 0.04 || 0}}">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Checkout</button>
@@ -70,5 +70,7 @@
             <p><span class="glyphicon glyphicon-heart"></span> from Udacity</p>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 </body>
 </html>
