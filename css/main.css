@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+}
+
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    margin-bottom: 2em;
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+.footer {
+    margin-top: 2em;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.footer:hover .glyphicon-heart::before {
+    color: red;
+}
+
+.glyphicon-heart::before {
+    transition: 0.25s color;
+}
